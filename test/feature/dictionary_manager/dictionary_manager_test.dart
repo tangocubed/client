@@ -1,27 +1,20 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:dart_event_sourcing/eventstore.dart';
+import 'package:dart_event_sourcing/modeling.dart';
 
-class OnMemoryEventStore extends EventStore {
+import 'package:app/feature_dictionary_manager.dart';
 
-  static OnMemoryEventStore create() {
-    return OnMemoryEventStore();
+class AggregateTestFixture<T extends Aggregate> {
+  T Function() aggregateProvider;
+  EventStore eventStore;
+  AggregateTestFixture(
+    this.aggregateProvider, { EventStore eventStore }
+  ) {
+    this.eventStore = eventStore ?? InMemoryEventStore();
   }
+  void givenNoPriorActivity() {
 
-  @override
-  add(event) {
-    throw UnimplementedError();
   }
-}
-
-abstract class EventStore {
-  add(dynamic event);
-}
-
-class AggregateTestFixture<T> {
-  AggregateTestFixture(T Function() provider);
-}
-
-class DictionaryManagerModel {
-
 }
 
 void main() {
@@ -30,8 +23,7 @@ void main() {
     AggregateTestFixture<DictionaryManagerModel> fixture;
 
     setUp(() {
-      fixture = AggregateTestFixture(DictionaryManagerModel.class)
-      eventStore = OnMemoryEventStore.create();
+      fixture = AggregateTestFixture(() => DictionaryManagerModel());
     });
 
     test("create command can set DictionaryManager's initial state.", () {

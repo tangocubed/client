@@ -69,7 +69,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "1d7af88a952809f6a975993b69c805bc5c61c317"
+      resolved-ref: "4e3fabfa99f18e3497f5eee571060519d1e5c06f"
       url: "git://github.com/iwauo/dart-event-sourcing.git"
     source: git
     version: "1.0.0"
@@ -125,6 +125,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.6.4"
+  pedantic:
+    dependency: transitive
+    description:
+      name: pedantic
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.8.0+1"
   petitparser:
     dependency: transitive
     description:
@@ -185,7 +192,7 @@ packages:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.14"
+    version: "0.2.11"
   typed_data:
     dependency: transitive
     description:
@@ -193,6 +200,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.6"
+  uuid:
+    dependency: transitive
+    description:
+      name: uuid
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.4"
   vector_math:
     dependency: transitive
     description:

@@ -1,9 +1,7 @@
 
 import 'package:dart_event_sourcing/modeling.dart';
 
-@Aggregate()
-class DictionaryMangerModel {
-  @AggregateIdentifier()
-  String modelId;
+class DictionaryManagerModel implements Aggregate {
+  String aggregateIdentifier;
 }
 
