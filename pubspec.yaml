@@ -7,13 +7,26 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^0.1.3
+  uuid: ^2.0.4
   dynamic_properties: ^1.0.0
   dart_event_sourcing:
-    git: git://github.com/iwauo/dart-event-sourcing.git
+    path: ../../laplacian/dart-event-sourcing
+
+#  dart_event_sourcing:
+#    git:
+#      url: git://github.com/iwauo/dart-event-sourcing.git
+#      ref: a9df468e9e017d22ee1df49be0c374f90cf5648e
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  dart_event_sourcing_test:
+    path: ../../laplacian/dart-event-sourcing-test
+#   dart_event_sourcing_test:
+#     git:
+#       url: git://github.com/iwauo/dart-event-sourcing-test.git
+#       ref: 5709f356a12c0cae929319fa9450a42f695c7ad3
+  test: any
 
 flutter:
   uses-material-design: true

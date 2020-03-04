@@ -7,5 +7,7 @@ set -x
 
 (
   cd $BASE_DIR &&
+  dartfmt -w . &&
+  flutter pub get &&
   flutter test
 )
