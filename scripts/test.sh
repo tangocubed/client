@@ -9,5 +9,6 @@ set -x
   cd $BASE_DIR &&
   dartfmt -w . &&
   flutter pub get &&
+  flutter packages pub run build_runner build &&
   flutter test
 )
